@@ -42,7 +42,7 @@ cd bin
 binディレクトリでターミナルを開いて以下を実行：
 
 ```bash
-java ChatServer.java 50000
+java -classpath .:../lib/javaEveryone302.jar ChatServer 50000
 ```
 
 ### 3. クライアント起動
@@ -55,13 +55,17 @@ java -classpath .:../lib/javaEveryone302.jar GameClient localhost 50000 a
 
 ##遊び方
 クライアント起動した後クライアントのターミナルで
+```
 rotate 50
 walk 100
-とすれば50回転,100進むことができる。
-
+```
+とすれば50回転,100進むことができます。
+```
 attack 100
-とすれば自分の方向の100経路100以内にいる相手を攻撃できる
-
+```
+とすれば自分の方向の100経路100以内にいる相手を攻撃できます。
+Turtleはエネルギーを10000保有しておりrotate,walk,attackの数値分だけ減っています。
+Turtleの攻撃が当たった際に相手のTurtleのエネルギーを大幅に減らすことができます！！
 
 ## 開発環境
 
